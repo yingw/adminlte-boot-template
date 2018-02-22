@@ -23,8 +23,12 @@ class HelloController {
 
     @RequestMapping(value = {"/*.html", "/*/*.html", "/*/*/*.html"})
     public String hello(HttpServletRequest request) {
-        logger.info("path = {}", request);
         logger.info("request.getRequestURI() = {}", request.getRequestURI());
         return request.getRequestURI();
+    }
+
+    @RequestMapping("/")
+    public String home() {
+        return "redirect:/index.html";
     }
 }
