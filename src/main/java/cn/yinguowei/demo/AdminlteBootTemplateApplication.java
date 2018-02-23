@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
 
+/**
+ * @author yinguowei 2018-2-22
+ */
 @SpringBootApplication
 public class AdminlteBootTemplateApplication {
 
@@ -18,11 +21,11 @@ public class AdminlteBootTemplateApplication {
 }
 
 @Controller
-class HelloController {
-    Logger logger = LoggerFactory.getLogger(HelloController.class);
+class DynamicController {
+    Logger logger = LoggerFactory.getLogger(DynamicController.class);
 
     @RequestMapping(value = {"/*.html", "/*/*.html", "/*/*/*.html"})
-    public String hello(HttpServletRequest request) {
+    public String route(HttpServletRequest request) {
         logger.info("request.getRequestURI() = {}", request.getRequestURI());
         return request.getRequestURI();
     }

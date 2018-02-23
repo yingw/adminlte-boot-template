@@ -4,7 +4,7 @@ Transfer [**AdminLTE**](https://adminlte.io) to integrated with [**Spring Boot**
 
 Versions:
 - AdminLTE (v2.4.3)
-- Spring Boot (v2.0.0)
+- Spring Boot (v2.0.0 or v1.5.x)
 - Thymeleaf (v3.0.x)
 - Thymeleaf Layout Dialect (v2.3.0)
 
